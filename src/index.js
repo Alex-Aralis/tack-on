@@ -8,3 +8,12 @@ export const tack = func =>
     ;
   }
 ;
+
+export const compose = func =>
+  function (arg) {
+    return this === _this
+      ? func(arg)
+      : this(func(arg))
+    ;
+  }
+;
