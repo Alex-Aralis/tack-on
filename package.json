@@ -1,0 +1,42 @@
+{
+  "name": "take-on",
+  "version": "0.0.0",
+  "description": "Rearrange curried arguments",
+  "main": "index.js",
+  "author": "Alex Aralis <alex.aralis@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "curry",
+    "currying",
+    "argmuments",
+    "functional",
+    "function bind syntax"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alex-Aralis/tack-on.git"
+  },
+  "scripts": {
+    "test": "nyc --reporter=lcovonly mocha --require babel-register -R spec",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "prepare": "gulp build"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-eslint": "^7.2.1",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.24.0",
+    "chai": "^3.5.0",
+    "del": "^2.2.2",
+    "eslint": "^3.18.0",
+    "eslint-plugin-import": "^2.2.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-babel": "^6.1.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "nyc": "^10.2.0"
+  },
+  "dependencies": {}
+}

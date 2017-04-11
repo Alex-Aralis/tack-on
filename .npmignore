@@ -1,0 +1,8 @@
+# blacklist everything
+/**/*
+
+# whitelist only stuff needed in npm package
+!/package.json
+!/README.md
+!/index.js
+!/lib/**/*.js
