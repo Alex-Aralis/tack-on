@@ -1,7 +1,7 @@
 {
   "name": "take-on",
   "version": "0.0.0",
-  "description": "Rearrange curried arguments",
+  "description": "Tack on functions to things that should have had them all along.",
   "main": "index.js",
   "author": "Alex Aralis <alex.aralis@gmail.com>",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "url": "https://github.com/Alex-Aralis/tack-on.git"
   },
   "scripts": {
-    "test": "nyc --reporter=lcovonly mocha --require babel-register -R spec",
+    "test": "gulp build; nyc --reporter=lcovonly mocha --require babel-register -R spec",
     "build": "gulp build",
     "clean": "gulp clean",
     "prepare": "gulp build"
