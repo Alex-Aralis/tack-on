@@ -30,4 +30,19 @@ describe('tack', function () {
   it('should work with lodash map', function () {
     expect(o::map(succ)).to.deep.equal(mapValues(o, succ));
   });
+
+  it('should compose when bound to functions', function () {
+    expect(succ::succ::succ(0)).to.equal(3);
+  });
+
+
+  const makeTriple = (a, b, c) => [a, b, c];
+
+  it('should insert `this` into non-defualt position', function () {
+    expect('middle'::(tack(makeTriple, 1))('start', 'end'))
+    .to.deep.equal(['start', 'middle', 'end']);
+
+    expect('end'::(tack(makeTriple, 2))('start', 'middle'))
+    .to.deep.equal(['start', 'middle', 'end']);
+  });
 });
