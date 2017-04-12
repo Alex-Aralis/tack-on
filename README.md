@@ -19,6 +19,23 @@ let succ = n => n + 1;
 expect({ a: 1, b: 2 }::map(succ)).to.deep.equal({ a: 2, b: 3 });
 ```
 
+Tacked functions assume composing behavior when bound to functions.
+
+```javascript
+const succ = tack(n => n + 1);
+const pred = tack(n => n - 1);
+
+expect(succ::pred::succ::succ(0)).to.equal(2);
+```
+
+The position `this` is inserted into can be specified.
+
+```javascript
+const toTriple = tack((a, b, c) => [a, b, c], 1);
+
+expect('middle'::toTriple('start', 'end'));
+```
+
 ## `compose`
 Make functions composable with the bind operator.  `compose` assumes functions that take only one argument.
 
