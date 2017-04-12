@@ -1,8 +1,8 @@
 # tack-on
-Some neato functions inspired by the new bind operator and functional programming.
+Some neato functions inspired by the new [bind operator](https://babeljs.io/docs/plugins/transform-function-bind/) and functional programming.
 
 ## tack
-Attach a function to a thing, without hanging it directly.  Great to add things that should have been there from the start, without mutating global objects.
+Attach a function to a thing, without hanging it directly.  Great to add functionality that should have been there from the start, without the risk of mutating global objects.
 
 ### What?
 
@@ -13,11 +13,11 @@ import { tack } from 'tack-on';
 const map = tack(mapValues);
 let succ = n => n + 1;
 
-expect({ a: 1, b: 2 }::map(succ).to.deep.equal({ a: 2, b: 3 });
+expect({ a: 1, b: 2 }::map(succ)).to.deep.equal({ a: 2, b: 3 });
 ```
 
 ## compose
-Make functions composable.
+Make functions composable with the bind operator.
 
 ### What?
 
