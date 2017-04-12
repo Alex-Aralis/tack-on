@@ -1,5 +1,6 @@
 # tack-on
-[![Build Status](https://travis-ci.org/Alex-Aralis/yank-down.svg?branch=master)](https://travis-ci.org/Alex-Aralis/yank-down) [![codecov](https://codecov.io/gh/Alex-Aralis/tack-on/branch/master/graph/badge.svg)](https://codecov.io/gh/Alex-Aralis/tack-on) [![npm version](https://badge.fury.io/js/tack-on.svg)](https://badge.fury.io/js/tack-on)
+[![Build Status](https://travis-ci.org/Alex-Aralis/yank-down.svg?branch=master)](https://travis-ci.org/Alex-Aralis/yank-down) [![codecov](https://codecov.io/gh/Alex-Aralis/tack-on/branch/master/graph/badge.svg)](https://codecov.io/gh/Alex-Aralis/tack-on) [![npm version](https://badge.fury.io/js/tack-on.svg)](https://badge.fury.io/js/tack-on) [![dependencies](https://david-dm.org/alex-aralis/tack-on.svg)](https://www.npmjs.com/package/tack-on)
+
 
 Some neato functions inspired by the new [bind operator](https://babeljs.io/docs/plugins/transform-function-bind/) and functional programming.
 
