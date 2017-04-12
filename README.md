@@ -1,5 +1,5 @@
 # tack-on
-[![Build Status](https://travis-ci.org/Alex-Aralis/yank-down.svg?branch=master)](https://travis-ci.org/Alex-Aralis/yank-down)
+[![Build Status](https://travis-ci.org/Alex-Aralis/yank-down.svg?branch=master)](https://travis-ci.org/Alex-Aralis/yank-down) [![codecov](https://codecov.io/gh/Alex-Aralis/tack-on/branch/master/graph/badge.svg)](https://codecov.io/gh/Alex-Aralis/tack-on)
 
 Some neato functions inspired by the new [bind operator](https://babeljs.io/docs/plugins/transform-function-bind/) and functional programming.
 
