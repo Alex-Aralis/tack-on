@@ -68,4 +68,14 @@ describe('tack', function () {
 
     expect('dsf'::f::f::f('start')).to.equal('called called called start');
   });
+
+  it('should throw error when action function returns unexpected value.', function () {
+    const f = tack(
+      () => 'called',
+      0,
+      () => 'unexpected',
+    );
+
+    expect(f).to.throw(/action function/);
+  });
 });

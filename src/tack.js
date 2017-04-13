@@ -30,7 +30,10 @@ const tack = (
         return func(...args);
 
       default:
-        throw Error(`Unexpected return value from action funciton: ${a}`);
+        throw new Error(
+          `Unexpected return value from action function: "${a}". `
+        + 'Expected "tack, "compose", or "nothing".'
+        );
     }
   }
 ;
