@@ -45,4 +45,27 @@ describe('tack', function () {
     expect('end'::(tack(makeTriple, 2))('start', 'middle'))
     .to.deep.equal(['start', 'middle', 'end']);
   });
+
+  it('should only bind to things according to the action function', function () {
+    const f = tack(
+      v => v ? 'bound' : 'unbound',
+      0,
+      t => t === 'a' ? 'tack' : 'nothing',
+    );
+
+    expect('a'::f()).to.equal('bound');
+    expect('a'::f()).to.equal('bound');
+    expect(f()).to.equal('unbound');
+    expect(1::f()).to.equal('unbound');
+  });
+
+  it('should compose accourding to the action function', function () {
+    const f = tack(
+      v => `called ${v}`,
+      0,
+      t => typeof t === 'function' ? 'compose' : 'nothing',
+    );
+
+    expect('dsf'::f::f::f('start')).to.equal('called called called start');
+  });
 });

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { compose } from '../';
 
-describe('tack', function () {
+describe('compose', function () {
   const succ = compose(num => num + 1);
   const pred = compose(num => num - 1);
 
