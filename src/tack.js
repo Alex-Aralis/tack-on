@@ -27,7 +27,7 @@ const tack = (
         return this(func(...args));
 
       case 'nothing':
-        return func(...args);
+        return this::func(...args);
 
       default:
         throw new Error(

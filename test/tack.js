@@ -78,4 +78,14 @@ describe('tack', function () {
 
     expect(f).to.throw(/action function/);
   });
+
+  it('should pass the binding through to the tacked function on the nothing action', function () {
+    const f = tack(
+      function () { return this; },
+      0,
+      () => 'nothing'
+    );
+
+    expect('value'::f()).to.equal('value');
+  });
 });

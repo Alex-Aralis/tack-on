@@ -54,6 +54,10 @@ const f = tack(
 expect(succ::f()).to.equal(3);
 ```
 
+the `action` function can return `"tack"`, `"compose"`, or `"nothing"`.
+
+When doing the `"nothing"` action, the binding is passed through to the tacked function.
+
 ## `compose`
 Make functions composable with the bind operator.  `compose` assumes functions that take only one argument.
 
