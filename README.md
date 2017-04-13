@@ -7,6 +7,10 @@ Some neato functions inspired by the new [bind operator](https://babeljs.io/docs
 ## `tack`
 Attach a function to a thing, without hanging it directly.  Great to add functionality that should have been there from the start, without the risk of mutating global objects.
 
+```javascript
+tack(func, injectPosition = 0, actionFunc?)
+```
+
 ### What?
 
 ```javascript
@@ -33,7 +37,21 @@ The position `this` is inserted into can be specified.
 ```javascript
 const toTriple = tack((a, b, c) => [a, b, c], 1);
 
-expect('middle'::toTriple('start', 'end'));
+expect('middle'::toTriple('start', 'end')).to.equal(['start', 'middle', 'end']);
+```
+
+A custom action function can be provided that will change the defaults for when to tack, when to compose and when to do call the original function.
+
+```javascript
+const f = tack(
+  func => func(2),
+  0,
+  t => t !== undefined ? 'tack' : 'nothing'
+);
+
+// f will tack to functions instead of composing with them.
+
+expect(succ::f()).to.equal(3);
 ```
 
 ## `compose`
