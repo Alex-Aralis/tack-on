@@ -1,6 +1,6 @@
 {
   "name": "tack-on",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tack on functions to things that should have had them all along.",
   "main": "index.js",
   "author": "Alex Aralis <alex.aralis@gmail.com>",
